@@ -1,0 +1,48 @@
+<div class="col-lg-12 col-sm-12 col-xs-12">
+  <div class="widget">
+      <div class="widget-header bordered-bottom bordered-themeprimary">
+          <i class="widget-icon fa fa-tasks themeprimary"></i>
+          <span class="widget-caption themeprimary">Quadro de tarefas</span>
+      </div>
+      <div class="widget-body no-padding">
+          <div class="task-container">
+              <div class="task-search" >
+                  <span class="input-icon" style="width : 300px !important">
+                      <input type="search" ng-model="query" placeholder="Filtrar tarefas..." class="form-control">
+                      <i class="fa fa-search gray"></i>
+                  </span>
+                  Status: 
+                    <select data-ng-model="search.status">
+                      <option value="">Todos</option>
+                      <option value="execução">execução</option>
+                      <option value="completada">completada</option>
+                      <option value="ativa">ativa</option>
+                    </select> 
+                  <a href="#/create" class="btn btn-primary">Adicionar</a>
+                  <a ng-click='vm.editar()' class="btn btn-warning">Editar</a>
+                  <a ng-click='vm.delete()' class="btn btn-danger">Excluir</a>
+              </div>
+
+              <ul class="tasks-list">
+                  <li ng-repeat="item in vm.tasks | filter: query | filter: search" class="task-item" >
+                      <div class="task-check">
+                          <label>
+                              <input type="checkbox" ng-model="item.selecionado">
+                              <span class="text"></span>
+                          </label>
+                      </div>
+                      <div class="task-state">
+                          <span ng-class="{ 'label-yellow' : item.status === 'execução','label-orange' : item.status === 'ativa','label-palegreen' : item.status === 'completada',}" class="label ">
+                              {{item.status}}
+                          </span>
+                      </div>
+                      <div class="task-time">{{item.criacao}}</div>
+                      <div class="task-body">{{item.descricao}}</div>
+                      <div class="task-creator">Criador: {{item.criador}}</div>
+                      <div class="task-assignedto">Designada para {{item.destino}}</div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
