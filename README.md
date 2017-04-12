@@ -9,6 +9,7 @@ As funcionalidades básicas, conforme mockup em anexo, são:
 3. Uma tarefa marcada terá a situação "Completada", caso contrário será "Ativa";
 4. Opção de filtrar as tarefas por situação.
 
+# Getting Started
 ```
  npm i http-server -g
  http-server
