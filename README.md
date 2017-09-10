@@ -1,4 +1,4 @@
-# teste.angular1x.static
+# AngularJs
 
 O teste é criar um quadro básico de tarefas utilizando o seguinte template como base:
 https://drive.google.com/folderview?id=0B2FaaF3ogVJLT3RJQTdzRy10V0U
