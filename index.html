@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="exemplo">
 <head>
+    <base href="/">
     <meta charset="utf-8" />
     <title>Lista de tarefas</title>
 
@@ -30,9 +31,9 @@
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
     <script src="assets/js/skins.min.js"></script>
     <!-- angular -->
-    <script src="https://code.angularjs.org/1.5.4/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.5.4/angular-route.min.js"></script>
-    <script src="https://code.angularjs.org/1.5.4/angular-animate.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.5/angular-animate.min.js"></script>
     <script src="/app.js"></script>
     <script src="/task/task.js"></script>
 
@@ -58,7 +59,7 @@
             <div class="navbar-container">
                 <!-- Navbar Barnd -->
                 <div class="navbar-header pull-left">
-                    <a href="#/" class="navbar-brand">
+                    <a href="/" class="navbar-brand">
                         <small>
                             <img src="assets/img/logo.png" alt="" />
                         </small>
@@ -394,7 +395,7 @@
                 <ul class="nav sidebar-menu">
                     <!--Dashboard-->
                     <li class="active">
-                        <a href="#/">
+                        <a href="/">
                             <i class="menu-icon glyphicon glyphicon-tasks"></i>
                             <span class="menu-text"> Lista de tarefas </span>
                         </a>
@@ -641,7 +642,7 @@
                     <ul class="breadcrumb">
                         <li>
                             <i class="fa fa-home"></i>
-                            <a href="#/">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li class="active">Lista de tarefas</li>
                     </ul>

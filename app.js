@@ -4,7 +4,8 @@ angular.module('exemplo', [
   'ngRoute'
 , 'task'
 ])
-.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+.config(function($routeProvider, $locationProvider) {
+	$locationProvider.html5Mode(true);
 	$routeProvider
 	.when('/', {
 		templateUrl: 'task/task.html',
@@ -21,5 +22,5 @@ angular.module('exemplo', [
 		controller: 'formController',
 		controllerAs: 'vm',
 	})
-	.otherwise({redirectTo: '#/'});
-}])
+	.otherwise({redirectTo: '/'});
+})
