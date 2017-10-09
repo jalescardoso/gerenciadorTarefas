@@ -1,6 +1,5 @@
 'use strict';
-
-angular.module('exemplo', [
+angular.module('appModule', [
   'ngRoute'
 , 'task'
 ])
@@ -9,18 +8,15 @@ angular.module('exemplo', [
 	$routeProvider
 	.when('/', {
 		templateUrl: 'task/task.html',
-		controller: 'tableController',
-		controllerAs: 'vm',
+		controller: 'tableController'
 	})
 	.when('/create', {
 		templateUrl: 'task/form-task.html',
-		controller: 'formController',
-		controllerAs: 'vm',
+		controller: 'formController'
 	})
 	.when('/update/:id', {
 		templateUrl: 'task/form-task.html',
-		controller: 'formController',
-		controllerAs: 'vm',
+		controller: 'formController'
 	})
 	.otherwise({redirectTo: '/'});
 })

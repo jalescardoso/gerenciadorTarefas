@@ -19,12 +19,12 @@
                       <option value="ativa">ativa</option>
                     </select> 
                   <a href="/create" class="btn btn-primary">Adicionar</a>
-                  <a ng-click='vm.editar()' class="btn btn-warning">Editar</a>
-                  <a ng-click='vm.delete()' class="btn btn-danger">Excluir</a>
+                  <a ng-click='editar()' class="btn btn-warning">Editar</a>
+                  <a ng-click='delete()' class="btn btn-danger">Excluir</a>
               </div>
 
               <ul class="tasks-list">
-                  <li ng-repeat="item in vm.tasks | filter: query | filter: search" class="task-item" >
+                  <li ng-repeat="item in tasks | filter: query | filter: search" class="task-item" >
                       <div class="task-check">
                           <label>
                               <input type="checkbox" ng-model="item.selecionado">
